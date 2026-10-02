@@ -1,0 +1,21 @@
+{
+  "name": "أبو ريفان للضيافة",
+  "short_name": "أبو ريفان",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#062b22",
+  "background_color": "#062b22",
+  "display": "standalone",
+  "lang": "ar",
+  "dir": "rtl"
+}
