@@ -35,14 +35,25 @@
 <section id="book" class="page-cta section-pad"><p class="eyebrow">لنبني تجربتكم</p><h2>حدثنا عن مناسبتك</h2><p>اختر وسيلة التواصل الأنسب لك، وسيعتني فريق أبو ريفان بتنسيق التفاصيل والإجابة عن استفسارك بكل عناية.</p><div class="dual-actions"><div class="number-group"><b dir="ltr">055 283 9458</b><a href="tel:+966552839458">اتصال</a><a href="https://wa.me/966552839458">واتساب</a></div><div class="number-group"><b dir="ltr">051 137 9817</b><a href="tel:+966511379817">اتصال</a><a href="https://wa.me/966511379817">واتساب</a></div></div></section></main>
 <footer><div class="footer-brand"><img src="assets/abu-rivan-logo-transparent.png" alt=""><p>أبو ريفان للضيافة السعودية الفاخرة<br><small>الرياض · المملكة العربية السعودية</small></p></div><div><a href="index.html">الرئيسية</a><a href="weddings.html">الأفراح</a><a href="events.html">المعارض</a></div><p>© 2026 أبو ريفان</p></footer><div class="mobile-contact"><a href="tel:+966552839458"><b>اتصال</b><span dir="ltr">055 283 9458</span></a><a href="https://wa.me/966552839458"><b>واتساب</b><span dir="ltr">055 283 9458</span></a><a href="tel:+966511379817"><b>اتصال</b><span dir="ltr">051 137 9817</span></a><a href="https://wa.me/966511379817"><b>واتساب</b><span dir="ltr">051 137 9817</span></a></div><script>
 (function () {
+  function trackConversionOnce(key, sendTo) {
+    var storageKey = 'aborevan_conversion_' + key;
+    try {
+      if (sessionStorage.getItem(storageKey)) return;
+      sessionStorage.setItem(storageKey, '1');
+    } catch (error) {
+      // Continue tracking when session storage is unavailable.
+    }
+    gtag('event', 'conversion', {'send_to': sendTo});
+  }
+
   document.addEventListener('click', function (event) {
     var link = event.target.closest('a[href]');
     if (!link || typeof gtag !== 'function') return;
     var href = link.getAttribute('href') || '';
     if (href.indexOf('https://wa.me/') === 0 || href.indexOf('https://api.whatsapp.com/') === 0) {
-      gtag('event', 'conversion', {'send_to': 'AW-18488200665/KplnCIGhto0dENmb7u9E'});
+      trackConversionOnce('whatsapp', 'AW-18488200665/KplnCIGhto0dENmb7u9E');
     } else if (href.indexOf('tel:') === 0) {
-      gtag('event', 'conversion', {'send_to': 'AW-18488200665/0BslCIShto0dENmb7u9E'});
+      trackConversionOnce('phone', 'AW-18488200665/0BslCIShto0dENmb7u9E');
     }
   }, true);
 })();
