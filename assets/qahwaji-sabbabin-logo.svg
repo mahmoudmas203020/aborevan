@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="title description">
+  <title id="title">شعار قهوجي وصبابين</title>
+  <desc id="description">هوية ضيافة سعودية فاخرة بالأخضر الداكن والذهبي</desc>
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4dc96"/>
+      <stop offset=".48" stop-color="#c99c42"/>
+      <stop offset="1" stop-color="#8e621d"/>
+    </linearGradient>
+    <filter id="shadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#01130e" flood-opacity=".35"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <circle cx="600" cy="600" r="548" fill="#061f19" stroke="url(#gold)" stroke-width="12"/>
+    <circle cx="600" cy="600" r="512" fill="none" stroke="#d9b563" stroke-opacity=".55" stroke-width="2"/>
+    <path d="M600 174c-30 45-35 88-12 124 18 28 19 62 3 100-14-42-14-79 9-114-23-31-23-71 0-110Zm-83 55c-22 38-24 73-5 104 16 26 15 53-2 82-11-33-10-63 9-91-19-28-20-60-2-95Zm166 0c18 35 17 67-2 95 19 28 20 58 9 91-17-29-18-56-2-82 19-31 17-66-5-104Z" fill="url(#gold)"/>
+    <path d="M445 430h310l-21 69H466l-21-69Zm36 90h238l-18 77c-9 39-45 67-86 67h-30c-41 0-77-28-86-67l-18-77Zm40 170h158v35H521v-35Zm-49 55h256v29H472v-29Z" fill="url(#gold)"/>
+    <path d="M452 512c-54 5-81 40-81 88 0 43 29 75 76 79v-34c-27-4-42-22-42-47 0-29 16-49 48-53l-1-33Zm296 0 1 33c32 4 48 24 48 53 0 25-15 43-42 47v34c47-4 76-36 76-79 0-48-27-83-81-88Z" fill="url(#gold)"/>
+    <path d="M600 768c-97 0-182 25-239 65 57 40 142 65 239 65s182-25 239-65c-57-40-142-65-239-65Zm0 22c51 0 98 7 137 20-39 13-86 20-137 20s-98-7-137-20c39-13 86-20 137-20Z" fill="#d9b563"/>
+    <text x="600" y="982" text-anchor="middle" fill="#fff8e8" font-family="serif" font-size="116" font-weight="700">قهوجي وصبابين</text>
+  </g>
+</svg>

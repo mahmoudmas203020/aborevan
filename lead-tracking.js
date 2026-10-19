@@ -4,8 +4,8 @@
   var ADS_ID = 'AW-18488200665';
   var WHATSAPP_CONVERSION = ADS_ID + '/KplnCIGhto0dENmb7u9E';
   var PHONE_CONVERSION = ADS_ID + '/0BslCIShto0dENmb7u9E';
-  var ATTRIBUTION_KEY = 'aborevan_attribution';
-  var REFERENCE_KEY = 'aborevan_lead_reference';
+  var ATTRIBUTION_KEY = 'qahwaji_sabbabin_attribution';
+  var REFERENCE_KEY = 'qahwaji_sabbabin_lead_reference';
 
   function safeSessionGet(key) {
     try {
@@ -57,7 +57,7 @@
       String(now.getMonth() + 1).padStart(2, '0') +
       String(now.getDate()).padStart(2, '0');
     var random = Math.random().toString(36).slice(2, 7).toUpperCase();
-    var reference = 'AR-' + date + '-' + random;
+    var reference = 'QS-' + date + '-' + random;
     safeSessionSet(REFERENCE_KEY, reference);
     return reference;
   }
@@ -67,7 +67,7 @@
     if (page === 'weddings.html') return 'ضيافة فرح أو مناسبة';
     if (page === 'events.html') return 'ضيافة معرض أو مؤتمر';
     if (page === 'qahwaji-riyadh.html') return 'قهوجي وصبابين في الرياض';
-    return 'خدمات أبو ريفان للضيافة';
+    return 'خدمات قهوجي وصبابين للضيافة';
   }
 
   function sourceLabel(attribution) {
@@ -94,7 +94,7 @@
   }
 
   function fireGoogleConversionOnce(key, sendTo) {
-    var storageKey = 'aborevan_conversion_' + key;
+    var storageKey = 'qahwaji_sabbabin_conversion_' + key;
     if (safeSessionGet(storageKey)) return;
     safeSessionSet(storageKey, '1');
     if (typeof window.gtag === 'function') {
@@ -105,7 +105,7 @@
   function pushIntent(channel, attribution) {
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
-      event: 'aborevan_lead_intent',
+      event: 'qahwaji_sabbabin_lead_intent',
       contact_channel: channel,
       service: serviceName(),
       lead_reference: getReference(),
